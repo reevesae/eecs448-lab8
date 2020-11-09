@@ -1,0 +1,26 @@
+<img class="slide" name="imageBase" src="pic1.jpg" height="500px" width="50%">
+<br>
+<button id="backButton" onclick="goBack()">Back</button>
+<button id="backButton" onclick="goNext()">Next</button>
+
+    <script>
+        images = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"]
+        slidePos = 0
+        function goBack() {
+            if(slidePos == 0)
+                slidePos = images.length-1
+            else
+                slidePos--
+
+            document.imageBase.src = images[slidePos]
+        }
+
+        function goNext() {
+            if(slidePos == images.length-1)
+                slidePos = 0
+            else
+                slidePos++
+
+            document.imageBase.src = images[slidePos]
+        }
+    </script>

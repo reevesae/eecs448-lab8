@@ -1,0 +1,26 @@
+<div>
+    <label for="pass">Password (8 characters minimum):</label>
+    <input type="password" id="pass1" name="password" required>
+</div>
+
+<div>
+    <label for="pass">Re-type password:</label>
+    <input type="password" id="pass2" name="password" required>
+</div>
+
+<input type="submit" value="Validate" onclick="checkPasswords()">
+<p id="message"></p>
+
+<script>
+    function checkPasswords()
+    {
+        if(document.getElementById("pass1").value.length > 8 && document.getElementById("pass2").value.length > 8){
+            if(document.getElementById("pass1").value === document.getElementById("pass2").value)
+                document.getElementById("message").innerHTML = "Verification passed!"
+            else
+            document.getElementById("message").innerHTML = "Verification failed - passwords do not match!"
+        }
+        else
+            document.getElementById("message").innerHTML = "Verification failed - length must be at least 8 characters!"    
+    }
+</script>
