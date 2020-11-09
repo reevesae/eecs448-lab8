@@ -1,0 +1,39 @@
+<p id="demoText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+<br>
+<border>
+    <label>Border Options</label>
+    <input type="number" id="borderR" placeholder="Red Value (0-255)" min="0" max="255" required>
+    <input type="number" id="borderG" placeholder="Green Value (0-255)" min="0" max="255" required>
+    <input type="number" id="borderB" placeholder="Blue Value (0-255)" min="0" max="255" required>
+    <input type="number" id="borderW" placeholder="Width (px)" required>
+</border>
+<br>
+<background></background>
+    <label>Background Options</label>
+    <input type="number" id="backR" placeholder="Red Value (0-255)" min="0" max="255" required>
+    <input type="number" id="backG" placeholder="Green Value (0-255)" min="0" max="255" required>
+    <input type="number" id="backB" placeholder="Blue Value (0-255)" min="0" max="255" required>
+</background>
+<br>
+<button id="submitButton" onclick="submitChanges()">Submit</button>
+
+
+<script>
+    function submitChanges(){
+        document.getElementById("demoText").style.borderColor = (parseInt(document.getElementById("borderR").value), parseInt(document.getElementById("borderG").value), parseInt(document.getElementById("borderB").value))
+        document.getElementById("demoText").style.borderWidth = (parseInt(document.getElementById("borderW").value))
+        document.getElementById("demoText").style.backgroundColor = (parseInt(document.getElementById("backR").value), parseInt(document.getElementById("backG").value), parseInt(document.getElementById("backB").value))
+    }
+</script>
+
+<style>
+    input{
+        width:150px;
+    }
+
+    #demoText{
+        border-color: white;
+        border-width: 0;
+        background-color: white;
+    }
+</style>
