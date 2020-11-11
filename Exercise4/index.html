@@ -20,9 +20,9 @@
 
 <script>
     function submitChanges(){
-        document.getElementById("demoText").style.borderColor = (parseInt(document.getElementById("borderR").value), parseInt(document.getElementById("borderG").value), parseInt(document.getElementById("borderB").value))
-        document.getElementById("demoText").style.borderWidth = (parseInt(document.getElementById("borderW").value))
-        document.getElementById("demoText").style.backgroundColor = (parseInt(document.getElementById("backR").value), parseInt(document.getElementById("backG").value), parseInt(document.getElementById("backB").value))
+        document.getElementById("demoText").style.borderColor = "rgb(" + document.getElementById("borderR").value + "," + document.getElementById("borderG").value + "," + document.getElementById("borderB").value + ")";
+        document.getElementById("demoText").style.borderWidth = (document.getElementById("borderW").value);
+        document.getElementById("demoText").style.backgroundColor = "rgb(" + document.getElementById("backR").value + "," + document.getElementById("backG").value + "," + document.getElementById("backB").value + ")";
     }
 </script>
 
